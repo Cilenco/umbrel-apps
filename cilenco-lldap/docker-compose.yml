@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  ldap:
+    image: lldap/lldap
+    restart: on-failure
+    environment:
+      LLDAP_LDAP_USER_DN: umbrel
+      LLDAP_LDAP_USER_PASS: ${APP_PASSWORD}
+      LLDAP_LDAP_BASE_DN: dc=homelab,dc=com
+      LLDAP_JWT_SECRET: ${LDAP_JWT_SECRET}
+      LLDAP_KEY_SEED: ${LDAP_JWT_KEY}
+    volumes:
+      - ${APP_DATA_DIR}/ldap:/data

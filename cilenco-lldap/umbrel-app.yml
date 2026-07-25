@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: lldap
+category: user-management
+name: LLDAP
+version: "0.6.3"
+tagline: Light LDAP implementation
+description: >-
+  LLDAP is a lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication. It integrates with many backends, from KeyCloak to Authelia to Nextcloud and more!
+
+  It comes with a frontend that makes user management easy, and allows users to edit their own details or reset their password by email.
+
+  The goal is not to provide a full LDAP server; if you're interested in that, check out OpenLDAP. This server is a user management system that is:
+releaseNotes: >-
+  This security-focused release improves protection against JIGGLE attacks, validates DoH and DNSCrypt upstream responses more strictly, and protects QUIC connections from unbounded reads.
+
+
+  Rulelist sizes are now limited to help prevent overload from misbehaving filter sources, and filter update intervals can be configured up to 365 days.
+
+
+  This release also fixes DNS response AA flag handling, HTTPS DNS rewrite `ech` parsing, and Custom filtering rules blocked-service checks.
+
+
+  Full release notes can be found at https://github.com/AdguardTeam/AdGuardHome/releases/tag/v0.107.78
+developer: LLDAP
+dependencies: []
+repo: https://github.com/lldap/lldap
+support: https://github.com/lldap/lldap/issues
+port: 17170
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  - 4.jpg
+path: ""
+defaultUsername: "umbrel"
+deterministicPassword: true
+submitter: Cilenco
