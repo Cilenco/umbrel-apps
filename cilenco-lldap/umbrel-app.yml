@@ -22,6 +22,7 @@ releaseNotes: >-
 
   Full release notes can be found at https://github.com/AdguardTeam/AdGuardHome/releases/tag/v0.107.78
 developer: LLDAP
+website: https://github.com/lldap/lldap
 dependencies: []
 repo: https://github.com/lldap/lldap
 support: https://github.com/lldap/lldap/issues
@@ -35,3 +36,4 @@ path: ""
 defaultUsername: "umbrel"
 deterministicPassword: true
 submitter: Cilenco
+submission: https://github.com/getumbrel/umbrel-apps/pull/1038
