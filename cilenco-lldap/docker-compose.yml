@@ -1,7 +1,13 @@
 version: "3.7"
 
 services:
-  ldap:
+  app_proxy:
+    environment:
+      APP_HOST: lldap_server_1
+      APP_PORT: 17170
+      PROXY_AUTH_ADD: "false"
+
+  server:
     image: lldap/lldap
     restart: on-failure
     environment:
