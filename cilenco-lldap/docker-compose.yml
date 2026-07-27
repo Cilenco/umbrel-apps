@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/lldap/lldap:latest-alpine-rootless@sha256:78ff572676cd6c69fca3ff37c5537d286ae93f10845aa9541553e93f90047baa
+    image: ghcr.io/lldap/lldap:latest-alpine@sha256:78ff572676cd6c69fca3ff37c5537d286ae93f10845aa9541553e93f90047baa
     restart: on-failure
     environment:
       LLDAP_LDAP_USER_DN: umbrel
