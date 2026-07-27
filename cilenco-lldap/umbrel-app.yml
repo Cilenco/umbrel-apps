@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: cilenco-lldap
+id: lldap
 category: user-management
 name: LLDAP
 version: "0.6.3"
@@ -11,29 +11,34 @@ description: >-
 
   The goal is not to provide a full LDAP server; if you're interested in that, check out OpenLDAP. This server is a user management system that is:
 releaseNotes: >-
-  This security-focused release improves protection against JIGGLE attacks, validates DoH and DNSCrypt upstream responses more strictly, and protects QUIC connections from unbounded reads.
+  Small release, focused on LDAP compatibility, TLS maintenance, dependency upgrades and documentation/examples.
 
+  Added
+  - LDAP schema definitions for memberOf, modifyTimestamp and pwdChangedTime
+  - Support for configuring the healthcheck listen addresses
+  - Usernames are now included in password recovery emails
 
-  Rulelist sizes are now limited to help prevent overload from misbehaving filter sources, and filter update intervals can be configured up to 365 days.
+  Changed
+  - JWT exp and iat claims are now serialized as NumericDate values to comply with RFC7519
+  - Migrated to rustls 0.23 and centralized TLS handling
+  - The login form no longer enforces a password length limit
 
+  Fixed
+  - pwdChangedTime is now emitted as LDAP GeneralizedTime instead of RFC3339
+  - LDAP base-scope searches for non-existent entries now return NoSuchObject
+  - cn equality filters are now case insensitive
+  - The server now shuts down the database connection pool gracefully
+  - The bootstrap script now handles empty globs correctly
 
-  This release also fixes DNS response AA flag handling, HTTPS DNS rewrite `ech` parsing, and Custom filtering rules blocked-service checks.
-
-
-  Full release notes can be found at https://github.com/AdguardTeam/AdGuardHome/releases/tag/v0.107.78
 developer: LLDAP
 website: https://github.com/lldap/lldap
 dependencies: []
 repo: https://github.com/lldap/lldap
 support: https://github.com/lldap/lldap/issues
 port: 17170
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
+gallery: []
 path: ""
 defaultUsername: "umbrel"
 deterministicPassword: true
 submitter: Cilenco
-submission: https://github.com/getumbrel/umbrel-apps/pull/1038
+submission:
