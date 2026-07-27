@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: lldap
+id: cilenco-lldap
 category: user-management
 name: LLDAP
 version: "0.6.3"
