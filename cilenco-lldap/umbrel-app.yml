@@ -4,24 +4,30 @@ category: user-management
 name: LLDAP
 version: "0.6.3"
 tagline: Light LDAP implementation
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/lldap.png
 description: >-
   LLDAP is a lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication. It integrates with many backends, from KeyCloak to Authelia to Nextcloud and more!
 
+
   It comes with a frontend that makes user management easy, and allows users to edit their own details or reset their password by email.
+
 
   The goal is not to provide a full LDAP server; if you're interested in that, check out OpenLDAP. This server is a user management system that is:
 releaseNotes: >-
   Small release, focused on LDAP compatibility, TLS maintenance, dependency upgrades and documentation/examples.
+
 
   Added
   - LDAP schema definitions for memberOf, modifyTimestamp and pwdChangedTime
   - Support for configuring the healthcheck listen addresses
   - Usernames are now included in password recovery emails
 
+
   Changed
   - JWT exp and iat claims are now serialized as NumericDate values to comply with RFC7519
   - Migrated to rustls 0.23 and centralized TLS handling
   - The login form no longer enforces a password length limit
+
 
   Fixed
   - pwdChangedTime is now emitted as LDAP GeneralizedTime instead of RFC3339
