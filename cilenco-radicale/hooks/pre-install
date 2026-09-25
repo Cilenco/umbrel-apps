@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-chown -R 1000:1000 "${APP_DATA_DIR}/data/config"
-chown -R 1000:1000 "${APP_DATA_DIR}/data/secrets"
-chown -R 1000:1000 "${APP_DATA_DIR}/data/data"
+DESIRED_OWNER="1000:1000"
+
+chown -R $DESIRED_OWNER "${APP_DATA_DIR}/data/config"
+chown -R $DESIRED_OWNER "${APP_DATA_DIR}/data/secrets"
+chown -R $DESIRED_OWNER "${APP_DATA_DIR}/data/data"
 
 echo "$LDAP_JWT_SECRET" > $APP_DATA_DIR/data/secrets/ldap_secret
