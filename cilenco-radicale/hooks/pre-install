@@ -7,4 +7,4 @@ chown -R $DESIRED_OWNER "${APP_DATA_DIR}/data/config"
 chown -R $DESIRED_OWNER "${APP_DATA_DIR}/data/secrets"
 chown -R $DESIRED_OWNER "${APP_DATA_DIR}/data/data"
 
-echo "$LDAP_JWT_SECRET" > $APP_DATA_DIR/data/secrets/ldap_secret
+echo "$LDAP_JWT_SECRET" > ${APP_DATA_DIR}/data/secrets/ldap_secret
