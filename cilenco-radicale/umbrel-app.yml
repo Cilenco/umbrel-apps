@@ -4,7 +4,7 @@ name: Radicale
 tagline: A powerful CalDAV and CardDAV server
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-radicale/logo.png
 category: networking
-version: "3.5.4.0"
+version: "3.8.1"
 port: 5232
 description: >-
   Radicale is a lightweight server application designed to manage and synchronize calendar and contact data using open standards such as CalDAV and CardDAV. It enables seamless sharing and synchronization of events, tasks, and contact information across multiple clients and devices.
