@@ -2,7 +2,20 @@
 type = ldap
 ldap_base = dc=homelab,dc=com
 ldap_uri = ldap://cilenco-lldap_server_1:3890
-ldap_reader_dn = uid=admin,ou=people,dc=homelab,dc=com
+ldap_reader_dn = uid=umbrel,ou=people,dc=homelab,dc=com
 ldap_filter = (&(objectClass=person)(uid={0}))
 ldap_secret_file = /secrets/ldap_secret
 lc_username = True
+
+[storage]
+predefined_collections = {
+  "def-addressbook": {
+    "D:displayname": "Meine Kontakte",
+    "tag": "VADDRESSBOOK"
+  },
+  "def-calendar": {
+    "C:supported-calendar-component-set": "VEVENT",
+    "D:displayname": "Mein Kalendar",
+    "tag": "VCALENDAR"
+  }
+}
