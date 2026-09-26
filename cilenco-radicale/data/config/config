@@ -19,3 +19,6 @@ predefined_collections = {
     "tag": "VCALENDAR"
   }
 }
+
+[sharing]
+type: files
